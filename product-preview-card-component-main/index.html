@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --green:#3E8068;
+      --gray-chateau:#a9a7ac;
+      --monsoon:#88888a;
+      --dawn-pink:#F4E9E3;
+      --white:#ffffff;
+      --dark-green:#1A4031;
+    }
+    .attribution { font-size: 11px; text-align: center; width: 100%; position: fixed;bottom: 10px; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      background-color:var(--dawn-pink) ;
+    }
+    .card{
+      width: 600px;
+      height: 100%;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10% auto;
+    }
+    .d-flex{
+      display: flex;
+    }
+    .row{
+      flex-direction: row;
+    }
+    .gap-20{
+      gap:20px;
+    }
+    .column{
+      flex-direction: column;
+    }
+    .content{
+      padding: 25px;
+      padding-right: 40px;
+    }
+    img{
+      width: 300px;
+      object-fit: contain;
+    }
+    .mobile-banner{
+      display: none;
+    }
+    .padge{
+      letter-spacing: 0.2em;
+      font-weight: 100;
+      color: var(--gray-chateau)
+    }
+    .description{
+      color: var(--monsoon);
+      letter-spacing: 0.01em;
+    }
+    .strike-price{
+      color:var(--gray-chateau)
+    }
+    .price-primary{
+      color:var(--green);
+      font-weight: bold;
+      font-size: 2em;
+      margin-right: 2px;
+    }
+    .mt-3{
+      margin-top: 3px;
+    }
+    .m-0{
+      margin: 0px;
+    }
+    .cart-btn{
+      background-color:var(--green);
+      color: var(--white);
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      font-size: 14px;
+      cursor: pointer;
+
+    }
+    .line-through{
+      text-decoration: line-through;
+    }
+    .cart-icon{
+      width: 14px;
+      margin-right: 10px;
+    }
+    .cart-btn > span{
+      vertical-align: top;
+    }
+    .cart-btn:hover{
+      background-color: var(--dark-green)
+    }
+    @media only screen and (max-width:600px) {
+      .card{
+        flex-direction: column;
+        max-width: 300px;
+      }
+      .desktop-banner{
+        display: none;
+      }
+      .mobile-banner{
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card d-flex gap-20">
+    <img class="desktop-banner" src="./images/image-product-desktop.jpg"/>
+    <img class="mobile-banner" src="./images/image-product-mobile.jpg"/>
+
+    <div class="content d-flex column gap-20"> 
+      <p class="padge m-0">PERFUME</p>
+      <h1 class="m-0">Gabrielle Essence Eau De Parfum</h1>
+     <p class="description m-0">
+      A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the House of CHANEL.
+     </p>
+    
+    <div class="price-container d-flex gap-20">
+      <span class="price-primary"> $149.99</span>
+      <p class="line-through mt-3 strike-price">$169.99</p>
+    </div>
+     
+     <button class="cart-btn">   
+      <img class="cart-icon" src="./images/icon-cart.svg"/>
+      <span>Add to Cart</span>
+     </button>
+    
+    </div>
+  </div>
+
+
+ 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/janarthanan-s/">Janarthanan</a>.
+  </div>
+</body>
+</html>
